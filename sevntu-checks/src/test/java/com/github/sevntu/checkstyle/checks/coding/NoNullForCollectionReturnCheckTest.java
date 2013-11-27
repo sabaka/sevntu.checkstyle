@@ -143,5 +143,15 @@ public class NoNullForCollectionReturnCheckTest extends BaseCheckTestSupport
         verify(checkConfig, getPath("InputNoNullForCollectionReturnCheck7.java"), expected);
     }
     
+    @Test
+    public void testIss160() throws Exception
+    {
+        final DefaultConfiguration checkConfig = createCheckConfig(NoNullForCollectionReturnCheck.class);
+//        checkConfig.addAttribute("searchThroughMethodBody", "true");
+        final String[] expected = {
+        };
+
+        verify(checkConfig, getPath("InputNoNullForCollectionReturnCheck8.java"), expected);
+    }
     
 }
