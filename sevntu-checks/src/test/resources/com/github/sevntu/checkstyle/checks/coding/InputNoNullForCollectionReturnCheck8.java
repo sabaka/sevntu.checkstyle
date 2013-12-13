@@ -7,6 +7,7 @@ public class InputNoNullForCollectionReturnCheck8
 
 			@Override
 			public MatchResult apply(Company input) {
+				MatchResult mr = new MatchResult();
 				String title = (input.getTicker() != null) ? String.format("%s (%s)", input.getName(),
 						input.getTicker()) : input.getName();
 				return mr;
